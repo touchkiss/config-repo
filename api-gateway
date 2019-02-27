@@ -1,0 +1,11 @@
+#自定义Zuul配置
+#zuul.routes.应用名.path   要访问的路径名
+#zuul.routes.应用名.service-id     真实服务id
+zuul.routes.myProduct.path=/myProduct/**
+zuul.routes.myProduct.service-id=product
+#将cookie传给各真实路径
+zuul.routes.myProduct.sensitive-headers=
+  
+
+#关闭权限验证，使得能够从页面上查看所有路由地址：页面地址/application/routes
+management.security.enabled=false
